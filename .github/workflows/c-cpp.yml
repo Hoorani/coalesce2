@@ -29,9 +29,10 @@ jobs:
 
   job3:
     runs-on: ubuntu-latest
-    steps:
     
-    - needs:
+    
+    needs:
         build
         show_welcoming
+    steps:
     - run: echo "job3 depnds on other two first to be executed"  
