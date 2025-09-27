@@ -26,3 +26,11 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
+
+  job3:
+    runs-on: ubuntu-latest
+    name: job3
+    needs:
+      - build
+      - show_welcoming
+    run: echo "job3 depnds on other two first to be executed"  
